@@ -4,7 +4,8 @@ Fransiscus Stephanus
 <html>
 <body>
   <br>
-  <input type="date" id="date1"><br>
+  <input type="date" id="date1">
+  <input type="date" id="date2"><br>
   <input type="submit" onclick="count()"><br>
   <p id="ans"></P>
 </body>
@@ -12,14 +13,14 @@ Fransiscus Stephanus
     function count() {
       var tgl1 = document.getElementById("date1").value;
 	  var data1= new Date(tgl1);
-      var tgl2 = new Date();
-	  var difftime = data1 - tgl2; 
-	  
+      var tgl2 = document.getElementById("date2").value;
+	  var data2= new Date(tgl2);
+	  var difftime = data1 - data2; 
 	  var difday = difftime / (1000 * 3600 * 24); 
 	  if(difday < 0){
 		difday*=-1;
 	  }
-      document.getElementById("ans").innerHTML = data1 + " Selisih dari date picker dan tanggal hari ini.";
+      document.getElementById("ans").innerHTML = difday + " Adalah selisi hari dari 2 date picker ini.";
 	  
     }
     </script>
