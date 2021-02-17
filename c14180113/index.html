@@ -1,2 +1,26 @@
 C14180113
 Fransiscus Stephanus
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+  <input type="date" id="date1"><br>
+  <input type="submit" onclick="count()"><br>
+  <p id="ans"></P>
+</body>
+<script type= "text/javascript">
+    function count() {
+      var tgl1 = document.getElementById("date1").value;
+	  var data1= new Date(tgl1);
+      var tgl2 = new Date();
+	  var difftime = data1 - tgl2; 
+	  
+	  var difday = difftime / (1000 * 3600 * 24); 
+	  if(difday < 0){
+		difday*=-1;
+	  }
+      document.getElementById("ans").innerHTML = data1 + " Selisih dari date picker dan tanggal hari ini.";
+	  
+    }
+    </script>
+</html>
