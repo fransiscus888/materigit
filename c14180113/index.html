@@ -2,3 +2,29 @@ C14180113
 Fransiscus Stephanus
 Pemrograman Java
 Dalam Mata kuliah ini saya mau membuat aplikasi untuk membantu perkuliahan saya.
+<!DOCTYPE html>
+<html>
+<body>
+  <br>
+  <input type="date" id="date1">
+  <input type="date" id="date2"><br>
+  <input type="submit" onclick="count()"><br>
+  <p id="ans"></P>
+</body>
+<script type= "text/javascript">
+    function count() {
+      var tgl1 = document.getElementById("date1").value;
+	  var data1= new Date(tgl1);
+      var tgl2 = document.getElementById("date2").value;
+	  var data2= new Date(tgl2);
+	  var difftime = data1 - data2; 
+	  var difday = difftime / (1000 * 3600 * 24); 
+	  if(difday < 0){
+		difday*=-1;
+	  }
+      document.getElementById("ans").innerHTML = difday + " Adalah selisi hari dari 2 date picker ini.";
+	  
+    }
+    </script>
+</html>
+Semangka , Melon
